@@ -1,0 +1,9 @@
+#sales tax calculator
+def sales_tax_calculator():
+  sales_tax = .06
+  price = float(input("Item price: "))
+  total_tax = sales_tax * price
+  print("Total tax = $",round(total_tax,2))
+  total_cost = total_tax + price
+  print("Total cost = $",round(total_cost,2))
+sales_tax_calculator()

@@ -1,0 +1,42 @@
+classes = []
+grades = []
+total = 0
+for grade in grades: 
+  total += score_map[grade]
+
+# collects the data of Class names and Grades in letter form
+def collect():
+#   i = 0
+#   while i <= 5:
+#     className = input("Enter class name: ")
+#     classes.append(className)
+#     i += 1
+#   print(classes)
+
+  y = 0
+  while y <= 5:
+    grade = input("Enter your grade, in letter form, for each class (ex.: B, A-, etc.): ")    
+    grade = grade.upper()
+    grades.append(grade)
+    y += 1
+    if len(grade) == 0:
+      pass
+  #gpa = total / 6
+  #print("GPA = ",gpa)
+  print("GPA = ",sum(score_map[grade] for grade in grades) / 6)
+
+score_map = {
+  'A' : 4.00,
+  'A-' : 3.67,
+  'B+' : 3.33,
+  'B' : 3.00,
+  'B-' : 2.67,
+  'C+' : 2.33,
+  'C' : 2.00,
+  'C-' : 1.67
+}
+
+collect()
+
+
+

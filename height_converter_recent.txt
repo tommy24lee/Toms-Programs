@@ -1,0 +1,57 @@
+# height converter, inches to feet
+from math import floor
+def height_converter():
+  def inches_to_feet(): 
+    height_inches_input = float(input("Input height in inches (ex.: 65): "))
+    height_feet_output = floor(height_inches_input / 12)
+    height_inches_output = round(height_inches_input % 12, 2)
+    # print(height_feet_output)
+    # print(height_inches_output)
+
+    print("Height in feet of",height_inches_input,"inches =",height_feet_output,"feet",height_inches_output,"inches")
+
+    ans_input = input("Do you want to rerun (Y/N): ")
+    if ans_input == "y" or ans_input == "Y":
+      inches_to_feet() 
+    else:
+      print("Goodbye")
+      print("")
+  inches_to_feet()
+
+# height converter, feet to inches
+  def feet_to_inches():
+    height_feet_input = float(input("Input height in feet (ex.: 5): "))
+    height_inches_input1 = float(input("Input height in inches (ex.: 6): "))
+    height_feet_output1 = height_feet_input * 12
+    height_inches_output1 = height_inches_input1
+    height_feet_inches_output = round(height_feet_output1 + height_inches_output1)
+    print("Height in inches of",height_feet_input,"feet",height_inches_input1,"inches =",height_feet_inches_output,"inches")
+
+    ans_input1 = input("Do you want to rerun (Y/N): ")
+    if ans_input1 == "y" or ans_input1 == "Y":
+      feet_to_inches() 
+    else:
+      print("Goodbye")
+  feet_to_inches()
+
+height_converter()
+# # inches_to_feet()
+# print("")
+# feet_to_inches()
+
+
+# from math import floor
+# print ("This program will convert your measurement (in feet) into feet and inches.")
+# print ()
+
+# # input section
+# userFeet = float(input("Enter feet: "))
+
+# # conversion
+# feet = floor(userFeet) # this function simply returns the integer part of whatever is passed to it
+# inches = (userFeet - feet) * 12
+
+# #output section
+# print("You are {} tall.".format(userFeet))
+# print("{0} feet is equivalent to {1} feet {2:.3f} inches".format(userFeet, feet, inches))
+# print("{0} feet {0:.1f} inches is equivalent to {1} inches".format(feet,inches))

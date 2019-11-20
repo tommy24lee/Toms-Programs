@@ -1,0 +1,6 @@
+n = str(input("You're in the Lost Forest. Go left or right?: "))
+while n == "right":
+  print("You got out of the Lost Forest!")
+  break
+else: 
+  print("Wrong! You're still in the Lost Forest.")
